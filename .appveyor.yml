@@ -23,5 +23,5 @@ deploy_script: # скрипт развёртывания
   - git config --global credential.helper store
   - git config --global user.name AppVeyor
   - git config --global user.email ci@appveyor.com
-  - echo "https://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" > "$HOME/.git-credentials"
+  - echo "https://$GITHUB_TOKEN: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" > "$HOME/.git-credentials"
   - npx push-dir --dir=dist --branch=gh-pages --force --verbose
